@@ -30,7 +30,7 @@ class Ruta {
     return this._salidas;
   }
 
-  set salidas (camion, base, horaI, horaF) {
+  set salidas (camion, baseI, horaI, horaF) {
     let salida = new Salida(camion, base, horaI, horaF);
     this._salidas.push(salida);
   }
@@ -38,11 +38,27 @@ class Ruta {
 }
 
 class Salida {
-  constructor (camion, base, horaInicio, horaFin) {
+  constructor (camion, baseI, horaInicio, horaFin) {
     this._camion = camion;
-    this._base = base;
+    this._baseI = baseI;
     this._horaInicio = horaInicio;
     this._horaFin = horaFin;
+  }
+
+  get camion () {
+    return this._camion;
+  }
+
+  get baseI () {
+    return this._baseI;
+  }
+
+  get horaInicio () {
+    return this._horaInicio;
+  }
+
+  get horaFin () {
+    return this._horaFin;
   }
 }
 
